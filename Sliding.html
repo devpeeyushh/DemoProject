@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    overflow: hidden;
+}
+
+.spiral {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    animation: shrink 2s linear infinite;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background: hsl(186, 82%, 57%);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 0;
+    animation: golgol 0.5s linear infinite;
+}
+
+@keyframes golgol {
+    from {
+        transform: rotate(0deg) translateX(150px);
+    }
+    to {
+        transform: rotate(360deg) translateX(150px);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(2);
+    }
+    to {
+        transform: scale(0.02);
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="spiral">
+    <div class="dot"></div>
+</div>
+
+</body>
+</html>
